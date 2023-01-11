@@ -1,0 +1,43 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+nav {
+	background-color: aqua;
+}
+
+ul {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+li {
+	list-style: none;
+	font-size: 30px;
+	margin-left: 40px;
+}
+
+a {
+	color: rgb(150, 32, 219);
+	text-decoration: none;
+}
+
+table {
+	font-family: arial, sans-serif;
+	border-collapse: collapse;
+	width: 100%;
+}
+
+td,
+th {
+	border: 1px solid #dddddd;
+	text-align: left;
+	padding: 8px;
+}
+
+tr:nth-child(even) {
+	background-color: #dddddd;
+}
