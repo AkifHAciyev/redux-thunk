@@ -36,9 +36,8 @@ function AddCustomers() {
 
 	return (
 		<>
-			<div className="add-form">
+			<div className="wrapper">
 				<form onSubmit={(event) => submitForm(event)}>
-					<h1>Add To List</h1>
 					<input
 						name="companyName"
 						required

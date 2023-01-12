@@ -28,6 +28,11 @@ button {
 	padding: 5px;
 }
 
+button:hover {
+	background-color: grey;
+	color: #fff;
+}
+
 a {
 	color: #fff;
 	text-decoration: none;
@@ -48,4 +53,17 @@ th {
 
 tr:nth-child(even) {
 	background-color: #dddddd;
+}
+
+.wrapper {
+	display: flex;
+	justify-content: center;
+	margin-top: 100px;
+}
+
+input {
+	margin-right: 20px;
+	padding: 5px;
+	border-radius: 8px;
+	border: 1px solid grey;
 }

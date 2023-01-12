@@ -1,14 +1,21 @@
 import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { add, deleteItem, getAll } from '../redux/actions/tableActionCreator';
+import { add } from '../redux/actions/favoritesActionCreator';
+import { getAll } from '../redux/actions/tableActionCreator';
 
 const Customers = () => {
 	let dispatch = useDispatch();
-	const data = useSelector((state) => state);
+	const data = useSelector((state) => state.tableReducer);
 
 	useEffect(() => {
 		dispatch(getAll());
 	}, [dispatch]);
+
+	const handleDelete = (id) => {
+		fetch(`https://northwind.vercel.app/api/customers/${id}`, {
+			method: 'DELETE',
+		}).then(() => dispatch(getAll()));
+	};
 
 	return (
 		<table>
@@ -31,7 +38,7 @@ const Customers = () => {
 							<td>{tr.contactName}</td>
 							<td>{tr.contactTitle}</td>
 							<td>
-								<button onClick={() => dispatch(deleteItem(tr))}>Delete</button>
+								<button onClick={() => handleDelete(tr.id)}>Delete</button>
 							</td>
 							<td>
 								<button onClick={() => dispatch(add(tr))}>Favorites</button>
