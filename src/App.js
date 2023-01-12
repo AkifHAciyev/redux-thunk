@@ -1,4 +1,5 @@
 import { Link, Route, Routes } from 'react-router-dom';
+import { ToastContainer } from 'react-toastify';
 import './App.css';
 import AddCustomer from './page/AddCustomer';
 import Customers from './page/Customers';
@@ -7,7 +8,8 @@ import Favorite from './page/Favorite';
 function App() {
 	return (
 		<div className="App">
-			<div className="App">
+			<ToastContainer autoClose={1000} />
+			<div>
 				<nav>
 					<ul>
 						<li>
