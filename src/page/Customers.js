@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { deleteItem, getAll } from '../redux/actions/tableActionCreator';
+import { add, deleteItem, getAll } from '../redux/actions/tableActionCreator';
 
 const Customers = () => {
 	let dispatch = useDispatch();
@@ -8,8 +8,7 @@ const Customers = () => {
 
 	useEffect(() => {
 		dispatch(getAll());
-		console.log(data);
-	}, []);
+	}, [dispatch]);
 
 	return (
 		<table>
@@ -20,6 +19,7 @@ const Customers = () => {
 					<th>Contact Name</th>
 					<th>Company Name</th>
 					<th>Delete</th>
+					<th>Favorites</th>
 				</tr>
 			</thead>
 			<tbody>
@@ -30,7 +30,12 @@ const Customers = () => {
 							<td>{tr.companyName}</td>
 							<td>{tr.contactName}</td>
 							<td>{tr.contactTitle}</td>
-							<button onClick={() => dispatch(deleteItem(tr))}>Delete</button>
+							<td>
+								<button onClick={() => dispatch(deleteItem(tr))}>Delete</button>
+							</td>
+							<td>
+								<button onClick={() => dispatch(add(tr))}>Favorites</button>
+							</td>
 						</tr>
 					))}
 			</tbody>

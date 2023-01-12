@@ -10,10 +10,10 @@ function App() {
 				<nav>
 					<ul>
 						<li>
-							<Link to={'/'}>Todo</Link>
+							<Link to={'/'}>Cuctomers</Link>
 						</li>
 						<li>
-							<Link to={'/addCustomer'}>Todo List</Link>
+							<Link to={'/addCustomer'}>Add Customer</Link>
 						</li>
 					</ul>
 				</nav>

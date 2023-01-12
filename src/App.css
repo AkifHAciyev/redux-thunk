@@ -5,7 +5,8 @@
 }
 
 nav {
-	background-color: aqua;
+	background-color: rgb(53, 76, 209);
+	padding: 20px;
 }
 
 ul {
@@ -20,8 +21,15 @@ li {
 	margin-left: 40px;
 }
 
+button {
+	cursor: pointer;
+	background-color: #fff;
+	border-radius: 8px;
+	padding: 5px;
+}
+
 a {
-	color: rgb(150, 32, 219);
+	color: #fff;
 	text-decoration: none;
 }
 

@@ -14,6 +14,13 @@ export const deleteItem = (todo) => {
 	};
 };
 
+export const deleteAll = (payload) => {
+	return {
+		type: 'DELETE_ALL',
+		payload,
+	};
+};
+
 export const getAll = () => {
 	return async (dispatch) => {
 		fetch('https://northwind.vercel.app/api/customers')
@@ -23,5 +30,3 @@ export const getAll = () => {
 			});
 	};
 };
-
-
